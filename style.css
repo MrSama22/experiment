@@ -10,6 +10,7 @@ body {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
     padding: 40px 20px;
+    
 }
 
 .container {
@@ -46,7 +47,8 @@ p {
     margin: 15px 0;
     transition: all 0.3s ease;
     cursor: pointer;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.30);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.30);
+
 
 }
 
@@ -61,6 +63,7 @@ p {
     font-weight: bold;
     font-size: 1.1em;
 }
+
 .top{
     color: white;
 }
@@ -68,7 +71,7 @@ p {
     margin-left: 40px;
     position: relative;
     padding-left: 20px;
-    border-left: 2px dashed #667eea;
+    border-left: 2px dashed #6576c0;
 }
 
 .answer .node {
@@ -82,6 +85,9 @@ p {
     margin-left: 60px;
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0,0,0,0.30);
+    border-left: 4px solid #667eea;
+    
+
 
 }
 
@@ -130,20 +136,32 @@ p {
     left: 0;
 }
 
+/* Before */
+.node::before{
+    content: "◉"; /* El símbolo que deseas agregar */
+    margin-right: 5px; /* Espacio entre el símbolo y el texto */
+}
+.question::before{
+    content: "❓"; /* El símbolo que deseas agregar */
+}
+.profile::before{
+    content:"→";
+    margin-right:5px;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
     }
-
+    
     .answer {
         margin-left: 20px;
     }
-
+    
     .profile {
         margin-left: 40px;
     }
-
+    
     .personality-types {
         grid-template-columns: 1fr;
     }
